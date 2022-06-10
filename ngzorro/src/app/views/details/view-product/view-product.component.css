@@ -1,0 +1,33 @@
+@import '../../../../global';
+
+.gutter-row {
+  border: 1px solid black;
+}
+
+p,
+span {
+  font-size: 16px;
+}
+
+.description-text {
+  color: black;
+  max-height: 250px;
+  overflow-x: hidden;
+}
+
+.description-text::-webkit-scrollbar-track {
+  padding: 2px 0;
+}
+
+.description-text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.description-text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #D3D3D3;
+}
+
+button {
+  width: 100px;
+}

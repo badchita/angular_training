@@ -1,0 +1,61 @@
+<body>
+  <section class="container">
+    <div class="row">
+      <div class="col header-col">
+        <h1>
+          Meet Our Heroes
+        </h1>
+      </div>
+    </div>
+    <div class="row row-card">
+      <div class="col-4" *ngFor="let hero of heroes">
+        <div class="card">
+          <img [src]="getImage(hero.image)" class="card-img-top" alt="card-image" width="100" height="500">
+          <div class="card-body">
+            <h5 class="card-title">{{ hero.name }}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <button class="btn" (click)="openModal(mymodal, hero.id)">Info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Hero's Information</h4>
+    </div>
+    <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-5">
+            <img class="image-details" [src]="getImage(hero_details.image)" alt="hero-image" width="300px"
+              height="300px">
+          </div>
+          <div class="col">
+            <h3>
+              Hero ID:
+              <small class="text-muted">{{ hero_details.id }}</small>
+            </h3>
+            <h3>
+              Hero Name:
+              <small class="text-muted">{{ hero_details.name }}</small>
+            </h3>
+            <h3>
+              Full Name:
+              <small class="text-muted">{{ hero_details.full_name }}</small>
+            </h3>
+            <h3>
+              Description: <br />
+              <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</small>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</a>
+    </div>
+  </ng-template>
+</body>

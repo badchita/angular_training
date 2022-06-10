@@ -1,0 +1,54 @@
+<div class="grid">
+  <br />
+  <form nz-form [formGroup]="productForm" (ngSubmit)="onclickSave()">
+    <div nz-row>
+      <div class="ml-5" nz-col nzSpan="11">
+        <span nz-typography nzType="secondary">Name</span>
+        <nz-form-control nzErrorTip="Please Input Your Name">
+          <input nz-input formControlName="name" />
+        </nz-form-control>
+      </div>
+      <div class="ml-5" nz-col nzSpan="12">
+        <span nz-typography nzType="secondary">Category</span>
+        <nz-form-control nzErrorTip="Please Input Category">
+          <input nz-input formControlName="category" />
+        </nz-form-control>
+      </div>
+    </div>
+    <br />
+    <div nz-row>
+      <div class="ml-5" nz-col nzSpan="11">
+        <span nz-typography nzType="secondary">Price</span>
+        <nz-form-control nzErrorTip="Please Input Price">
+          <nz-input-number formControlName="price"></nz-input-number>
+        </nz-form-control>
+      </div>
+      <div class="ml-5" nz-col nzSpan="12">
+        <span nz-typography nzType="secondary">Quantity</span>
+        <nz-form-control nzErrorTip="Please Input Quantity">
+          <nz-input-number formControlName="quantity"></nz-input-number>
+        </nz-form-control>
+      </div>
+    </div>
+    <div nz-row>
+      <div class="ml-5" nz-col nzSpan="11">
+        <span nz-typography nzType="secondary">Description</span>
+        <nz-form-control>
+          <textarea rows="6" nz-input formControlName="description"></textarea>
+        </nz-form-control>
+      </div>
+    </div>
+    <br />
+    <div class="mb-5" nz-row>
+      <div nz-col nzOffset="20">
+        <button class="mr-2" nz-button nzType="primary" nzSize="large">
+          Save
+        </button>
+        <button nz-button nzType="default" nzDanger="" nzSize="large" (click)="onclickCancel()">
+          Cancel
+        </button>
+      </div>
+    </div>
+    <br />
+  </form>
+</div>

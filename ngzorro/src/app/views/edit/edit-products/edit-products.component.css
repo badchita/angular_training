@@ -1,0 +1,7 @@
+@import '../../../../global';
+
+nz-form-control input,
+nz-input-number,
+textarea {
+  width: 100%;
+}

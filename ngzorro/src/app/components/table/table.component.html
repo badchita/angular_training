@@ -1,0 +1,34 @@
+<div class="container">
+  <button nz-button (click)="onclickAdd()" nzType="primary" class="add-button">Add</button>
+
+  <nz-table #editRowTable nzBordered [nzData]="items">
+    <thead>
+      <tr>
+        <th *ngFor="let itemHeader of itemHeaders" [nzWidth]="itemHeader.firstTitle ? '30%' : ''">
+          {{ itemHeader.title }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items" class="editable-row" (click)="onclickRow(item.id)">
+        <td>
+          {{ item.name }}
+        </td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price }}</td>
+        <td *ngIf="item.status === 'O'">
+          <nz-tag [nzColor]="'#87d068'">Available</nz-tag>
+        </td>
+        <td class="action-buttons">
+          <button nz-button nzType="primary" (click)="onclickEdit(item.id)">
+            <i nz-icon nzType="edit"></i>
+          </button>
+          <button nz-button nz-popconfirm nzType="primary" nzPopconfirmTitle="Are you sure delete this product?"
+            type="submit" nzDanger (nzOnConfirm)="onclickArchive(item.id)" (click)="$event.stopPropagation()">
+            <i nz-icon nzType="delete"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

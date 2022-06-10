@@ -1,0 +1,59 @@
+<div *ngIf="products_detail" class="grid">
+  <br />
+  <div nz-row>
+    <div nz-col>
+      <h2 class="ml-5" nz-typography>Product Detail</h2>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col>
+      <h3 class="ml-5" nz-typography nzType="secondary">Product Information</h3>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Name</span><br />
+      <p class="ml-5" nz-typography nzType="secondary"><strong>{{ products_detail.name }}</strong></p>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Location</span><br />
+      <p class="ml-5" nz-typography nzType="secondary"><strong>{{ address }}</strong></p>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Price</span><br />
+      <p class="ml-5" nz-typography nzType="secondary"><strong>{{ products_detail.price }}</strong></p>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Quantity</span><br />
+      <p class="ml-5" nz-typography nzType="secondary"><strong>{{ products_detail.quantity }}</strong></p>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Category</span><br />
+      <p class="ml-5" nz-typography nzType="secondary"><strong>{{ products_detail.category }}</strong></p>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <span class="ml-5" nz-typography nzType="secondary">Status</span><br />
+      <nz-tag class="ml-5" *ngIf="products_detail.status === 'O'" [nzColor]="'#87d068'">Available</nz-tag>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="24">
+      <span class="ml-5" nz-typography nzType="secondary">Description</span><br />
+      <div class="description-text ml-5 mr-5" nz-typography [innerHTML]="products_detail.description"></div>
+    </div>
+  </div>
+  <br />
+  <div class="mb-5" nz-row>
+    <div nz-col nzOffset="19">
+      <button class="mr-2" nz-button nzType="primary" nzSize="large" (click)="onclickEdit(products_detail.id)">
+        Edit
+      </button>
+      <button nz-button nzType="default" nzDanger="" nzSize="large" (click)="onclickCancel()">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <br />
+</div>

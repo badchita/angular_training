@@ -1,0 +1,9 @@
+.container-fluid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #1976d2;
+  width: 70%;
+  margin-top: 6%;
+  color: white;
+  border-radius: 10px;
+}

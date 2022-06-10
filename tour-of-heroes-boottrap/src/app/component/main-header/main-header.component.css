@@ -1,0 +1,17 @@
+nav {
+  height: 75px;
+  background-color: #B52E31;
+}
+
+nav a {
+  color: white;
+}
+
+.collapse {
+  width: 370px;
+  margin-right: 24px;
+}
+
+.container-fluid {
+  margin-left: 24px;
+}

@@ -1,0 +1,27 @@
+.header-col {
+  text-align: center;
+}
+
+.row-card {
+  margin-top: 48px;
+  color: #B52E31;
+}
+
+.col-4 .card {
+  margin: auto;
+  margin-top: 48px;
+  width: 18rem;
+}
+
+.col-4 img {
+  height: 400px;
+}
+
+.btn {
+  background-color: #B52E31;
+  color: white;
+}
+
+.image-details {
+  margin: auto;
+}
