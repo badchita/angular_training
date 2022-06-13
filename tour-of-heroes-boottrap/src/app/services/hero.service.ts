@@ -25,4 +25,10 @@ export class HeroService {
     const url = `${this.url}/${id}`;
     return this.http.get<Hero>(url);
   }
+
+  addHero(hero: Hero): Observable<Hero>{
+    console.log(hero);
+
+    return this.http.post<Hero>(this.url, hero, this.httpOptions);
+  }
 }

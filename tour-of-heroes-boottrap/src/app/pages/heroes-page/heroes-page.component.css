@@ -7,14 +7,15 @@
   color: #B52E31;
 }
 
-.col-4 .card {
+.col-lg-4 .card {
   margin: auto;
   margin-top: 48px;
-  width: 18rem;
+  width: 70%;
+  /* width: 18rem; */
 }
 
-.col-4 img {
-  height: 400px;
+.col-lg-4 {
+  margin: auto;
 }
 
 .btn {

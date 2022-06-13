@@ -1,5 +1,4 @@
 nav {
-  height: 75px;
   background-color: #B52E31;
 }
 
@@ -7,11 +6,32 @@ nav a {
   color: white;
 }
 
-.collapse {
-  width: 370px;
-  margin-right: 24px;
+.container-fluid a:hover {
+  color: #1976d2;
 }
 
 .container-fluid {
   margin-left: 24px;
+}
+
+.collapse a {
+  color: white;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  /* border: 1px solid black; */
+  color: green;
+  border-color: rgb(255, 102, 203);
+}
+
+@media (max-width: 575.98px) {
+  .container-fluid {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 1399.98px) {
+  nav {
+    height: 75px;
+  }
 }

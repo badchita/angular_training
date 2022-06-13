@@ -1,9 +1,9 @@
 .jumbotron {
   width: 100%;
-  height: 45vh;
+  height: 55vh;
   background-image: url('../../../assets/images/jumbotron-image.jpg');
   background-size: cover;
-  background-position: 20%, 20%;
+  background-position: 42%, 10%;
 }
 
 .btn {
@@ -26,8 +26,16 @@
   color: #B52E31;
 }
 
-.col-4 .card {
+.col-lg-4 .card {
   margin: auto;
-  width: 18rem;
-  height: 18rem;
+  width: 70%;
+  /* height: 18rem; */
+}
+
+.col-lg-4 {
+  margin: auto;
+}
+
+.col-xs-12 .card {
+  margin-bottom: 32px;
 }
