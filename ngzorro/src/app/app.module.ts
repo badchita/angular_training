@@ -15,6 +15,7 @@ import { ProductsComponent } from './views/products/products.component';
 import { TableComponent } from './components/table/table.component';
 import { ViewProductComponent } from './views/details/view-product/view-product.component';
 import { EditProductsComponent } from './views/edit/edit-products/edit-products.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -27,6 +28,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 
 registerLocaleData(en);
@@ -39,6 +43,7 @@ registerLocaleData(en);
     TableComponent,
     ViewProductComponent,
     EditProductsComponent,
+    MainHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,10 @@ registerLocaleData(en);
     NzTypographyModule,
     NzFormModule,
     NzInputNumberModule,
-    NzPopconfirmModule
+    NzPopconfirmModule,
+    NzLayoutModule,
+    NzBreadCrumbModule,
+    NzMenuModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

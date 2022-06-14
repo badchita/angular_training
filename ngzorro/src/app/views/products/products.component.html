@@ -1,2 +1,6 @@
-<app-table [itemHeaders]="tableHeaders" [items]="products" [url]="url" [urlDetails]="urlDetails"
-  (getDeletId)="ongetDeleteId($event)"></app-table>
+<nz-layout>
+  <nz-content>
+    <app-table [itemHeaders]="tableHeaders" [items]="products" [url]="url" [urlDetails]="urlDetails"
+      (getDeletId)="ongetDeleteId($event)"></app-table>
+  </nz-content>
+</nz-layout>

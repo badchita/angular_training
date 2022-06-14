@@ -28,6 +28,6 @@ span {
   background-color: #D3D3D3;
 }
 
-button {
-  width: 100px;
+.buttons {
+  width: 90%;
 }

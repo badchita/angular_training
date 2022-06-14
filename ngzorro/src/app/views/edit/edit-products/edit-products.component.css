@@ -5,3 +5,9 @@ nz-input-number,
 textarea {
   width: 100%;
 }
+
+.buttons {
+  width: 100%;
+}
+
+@media (max-width: 576px) {}
