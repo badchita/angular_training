@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Hero } from 'src/app/interface/hero';
 import { HeroService } from 'src/app/services/hero.service';
 
@@ -11,8 +12,11 @@ export class HomePageComponent implements OnInit {
   heroes: Hero[] = [];
 
   constructor(
-    private heroService: HeroService
-  ) { }
+    private heroService : HeroService,
+    private titleService: Title
+  ) {
+    this.titleService.setTitle('Home')
+  }
 
   ngOnInit(): void {
     this.getHeroes()

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { Hero } from 'src/app/interface/hero';
 import { HeroService } from 'src/app/services/hero.service';
 
@@ -11,9 +12,12 @@ import { HeroService } from 'src/app/services/hero.service';
 export class BecomAHeroPageComponent implements OnInit {
   heroForm!: FormGroup;
   constructor(
-    private formBuilder: FormBuilder,
-    private heroService: HeroService,
-  ) { }
+    private formBuilder : FormBuilder,
+    private heroService : HeroService,
+    private titleService: Title
+  ) {
+    this.titleService.setTitle('Become A Hero');
+  }
 
   ngOnInit(): void {
     this.validateForm()

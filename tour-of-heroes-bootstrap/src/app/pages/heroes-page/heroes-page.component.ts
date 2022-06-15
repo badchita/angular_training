@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Hero } from 'src/app/interface/hero';
 import { HeroService } from 'src/app/services/hero.service';
@@ -15,9 +16,12 @@ export class HeroesPageComponent implements OnInit {
   public closeResult: string = '';
 
   constructor(
-    private heroService: HeroService,
-    private modalService: NgbModal
-  ) { }
+    private heroService : HeroService,
+    private modalService: NgbModal,
+    private titleService: Title
+  ) {
+    this.titleService.setTitle('Heroes')
+  }
 
   ngOnInit(): void {
     this.getHeroes()
