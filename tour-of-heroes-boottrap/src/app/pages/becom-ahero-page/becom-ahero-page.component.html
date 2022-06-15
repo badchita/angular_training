@@ -1,7 +1,7 @@
 <body>
   <div class="container-fluid">
-    <form [formGroup]="heroForm" (ngSubmit)="onclickBecomeAHero()" novalidate>
-      <div class="mb-3">
+    <form class="row" [formGroup]="heroForm" (ngSubmit)="onclickBecomeAHero()" novalidate>
+      <div class="mb-3 col-12 order-lg-1 order-2">
         <label class="form-label">
           <h4>
             Your Hero Name
@@ -10,7 +10,7 @@
         <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp">
         <div class="invalid-feedback">Please Fill Up You Hero Name</div>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 col-12 order-lg-2 order-1">
         <label class="form-label">
           <h4>
             Your Full Name
@@ -18,7 +18,7 @@
         </label>
         <input type="text" class="form-control" formControlName="full_name">
       </div>
-      <div class="mb-3">
+      <div class="mb-3 col-12 order-lg-3 order-3">
         <label class="form-label">
           <h4>
             Description
@@ -26,8 +26,8 @@
         </label>
         <textarea type="text" rows="8" class="form-control" formControlName="description"></textarea>
       </div>
-      <div class="mb-3">
-        <button class="btn">Become a Hero!</button>
+      <div class="mb-3 col-12 order-lg-4 order-4">
+        <button class=" btn">Become a Hero!</button>
       </div>
     </form>
   </div>
